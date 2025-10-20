@@ -1,8 +1,8 @@
-# Encore.ts + Next.js Authentication Starter
+# Encore.ts + Next.js + BetterAuth + Drizzle Starter
 
 This is a starter template for building applications with [Encore.ts](https://encore.dev) and [Next.js](https://nextjs.org/) with authentication built-in.
 
-It uses [Better Auth](https://better-auth.com/) for authentication and [Drizzle ORM](https://orm.drizzle.team/) with PostgreSQL for the database.
+It uses [BetterAuth](https://better-auth.com/) for authentication and [Drizzle ORM](https://orm.drizzle.team/) with PostgreSQL for the database.
 
 ### Features
 - Email & password authentication
@@ -15,7 +15,7 @@ It uses [Better Auth](https://better-auth.com/) for authentication and [Drizzle 
 ### Tech stack
 - **Backend:** [Encore.ts](https://encore.dev) - Type-safe backend with automatic infrastructure
 - **Frontend:** [Next.js 15](https://nextjs.org/) - React framework with App Router
-- **Auth:** [Better Auth](https://better-auth.com/) - Full-featured authentication library
+- **Auth:** [BetterAuth](https://better-auth.com/) - Full-featured authentication library
 - **Database:** [Drizzle ORM](https://orm.drizzle.team/) + PostgreSQL
 - **UI:** [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
 
