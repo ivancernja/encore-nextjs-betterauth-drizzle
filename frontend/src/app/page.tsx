@@ -28,7 +28,7 @@ export default function Home() {
               Full-stack authentication starter
             </div>
             <h1 className="mb-4 text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Build production-ready apps with Encore & Next.js
+              Encore.ts + Next.js + BetterAuth + Drizzle
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-base text-muted-foreground sm:text-lg">
               A complete authentication starter with type-safe backend, modern frontend,
