@@ -3,11 +3,13 @@
 import { useSession } from "@/lib/auth-client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { 
-  Rocket, 
-  Zap, 
-  Shield, 
-  Database, 
+import {
+  CheckSquare,
+  Calendar,
+  Filter,
+  Zap,
+  Shield,
+  Database,
   MoveRight
 } from "lucide-react";
 
@@ -24,15 +26,15 @@ export default function Home() {
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <div className="mb-4 inline-flex items-center rounded-full border px-2.5 py-1 text-xs sm:text-sm">
-              <Rocket className="mr-1.5 size-3.5 sm:size-4" />
-              Full-stack authentication starter
+              <CheckSquare className="mr-1.5 size-3.5 sm:size-4" />
+              Powerful Task Management
             </div>
             <h1 className="mb-4 text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Encore.ts + Next.js + BetterAuth + Drizzle
+              Organize Your Life with TodoFlow
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-base text-muted-foreground sm:text-lg">
-              A complete authentication starter with type-safe backend, modern frontend,
-              and automatic infrastructure provisioning.
+              A modern, intuitive todo application that helps you stay organized
+              and productive. Manage tasks with priorities, due dates, and smart filtering.
             </p>
             
             {!isPending && session?.user ? (
@@ -70,60 +72,98 @@ export default function Home() {
       <section className="container px-4 pb-16 md:pb-20">
         <div className="mb-8 text-center">
           <h2 className="mb-3 text-2xl font-semibold sm:text-3xl">
-            Everything you need to get started
+            Everything you need to stay productive
           </h2>
           <p className="text-sm text-muted-foreground sm:text-base">
-            Production-ready stack with best practices built in
+            Powerful features to help you manage your tasks effectively
           </p>
         </div>
-        
+
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col gap-3 rounded-lg border bg-card p-5">
-              <Rocket className="size-5 shrink-0" />
+              <CheckSquare className="size-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-semibold sm:text-base">
-                  Encore.ts Backend
+                  Task Management
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Type-safe backend with automatic infrastructure provisioning
+                  Create, edit, and complete tasks with ease. Stay on top of your work.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-3 rounded-lg border bg-card p-5">
-              <Zap className="size-5 shrink-0" />
+              <Calendar className="size-5 shrink-0 text-primary" />
               <div>
                 <h3 className="mb-1 text-sm font-semibold sm:text-base">
-                  Next.js Frontend
+                  Due Dates
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Modern React framework with App Router and server components
+                  Set deadlines and get visual indicators for overdue tasks.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-3 rounded-lg border bg-card p-5">
+              <Filter className="size-5 shrink-0 text-primary" />
+              <div>
+                <h3 className="mb-1 text-sm font-semibold sm:text-base">
+                  Smart Filtering
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Filter by status, priority, and sort tasks to focus on what matters.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 rounded-lg border bg-card p-5">
+              <Zap className="size-5 shrink-0 text-primary" />
+              <div>
+                <h3 className="mb-1 text-sm font-semibold sm:text-base">
+                  Priority Levels
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Organize tasks by priority: low, medium, or high importance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Technology Stack Section */}
+        <div className="mx-auto max-w-5xl mt-16">
+          <div className="mb-8 text-center">
+            <h2 className="mb-3 text-2xl font-semibold sm:text-3xl">
+              Built with modern technology
+            </h2>
+            <p className="text-sm text-muted-foreground sm:text-base">
+              Powered by a production-ready stack
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="flex items-center gap-3 rounded-lg border bg-card p-4">
               <Shield className="size-5 shrink-0" />
               <div>
-                <h3 className="mb-1 text-sm font-semibold sm:text-base">
-                  Better Auth
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Full-featured authentication with email/password and OAuth
-                </p>
+                <h3 className="text-sm font-semibold">Secure Authentication</h3>
+                <p className="text-xs text-muted-foreground">BetterAuth</p>
               </div>
             </div>
-            
-            <div className="flex flex-col gap-3 rounded-lg border bg-card p-5">
+
+            <div className="flex items-center gap-3 rounded-lg border bg-card p-4">
               <Database className="size-5 shrink-0" />
               <div>
-                <h3 className="mb-1 text-sm font-semibold sm:text-base">
-                  Drizzle ORM
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Type-safe database access with PostgreSQL
-                </p>
+                <h3 className="text-sm font-semibold">Type-safe Database</h3>
+                <p className="text-xs text-muted-foreground">PostgreSQL + Drizzle</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 rounded-lg border bg-card p-4">
+              <Zap className="size-5 shrink-0" />
+              <div>
+                <h3 className="text-sm font-semibold">Modern Stack</h3>
+                <p className="text-xs text-muted-foreground">Next.js + Encore.ts</p>
               </div>
             </div>
           </div>
