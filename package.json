@@ -7,8 +7,11 @@
     "dev:frontend": "cd frontend && npm run dev",
     "build": "encore build",
     "db:generate": "drizzle-kit generate",
+    "db:generate:files": "drizzle-kit generate --config=drizzle.files.config.ts",
     "db:studio": "drizzle-kit studio",
+    "db:studio:files": "drizzle-kit studio --config=drizzle.files.config.ts",
     "db:push": "drizzle-kit push",
+    "db:push:files": "drizzle-kit push --config=drizzle.files.config.ts",
     "test": "vitest"
   },
   "dependencies": {
