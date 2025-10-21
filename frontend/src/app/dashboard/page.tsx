@@ -13,7 +13,8 @@ import {
   Shield,
   Rocket,
   Database,
-  Zap
+  Zap,
+  Image as ImageIcon
 } from "lucide-react";
 
 export default function Dashboard() {
@@ -137,6 +138,19 @@ export default function Dashboard() {
                   </code>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Quick Actions */}
+          <div className="rounded-lg border bg-card p-6">
+            <h2 className="mb-4 text-lg font-semibold">Quick Actions</h2>
+            <div className="flex gap-3">
+              <Button asChild>
+                <Link href="/dashboard/photos" className="inline-flex items-center gap-2">
+                  <ImageIcon className="size-4" />
+                  <span>Manage Photos</span>
+                </Link>
+              </Button>
             </div>
           </div>
 
